@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8"><title>Ishwar Tudu - Email Signature</title></head>
+<body style="margin:0;padding:24px;background:#f3f3f3;font-family:Arial,sans-serif;">
+
+
+<!-- ====== COPY BUTTON (ye card ka hissa nahi hai) ====== -->
+<div style="max-width:460px;margin-bottom:16px;padding:14px 16px;background:#fff;border:1px dashed #D4A843;border-radius:8px;font-size:13px;color:#333;line-height:20px;">
+  <button id="copybtn" style="background:#12264F;color:#fff;border:0;border-radius:6px;padding:10px 18px;font-size:14px;font-weight:bold;cursor:pointer;">Signature Copy Karein</button>
+  <span id="msg" style="margin-left:10px;color:#1a7f37;font-weight:bold;"></span><br>
+  <span style="color:#666;">Copy hone ke baad GoDaddy Email &rarr; Settings &rarr; Signature mein paste karein.</span>
+</div>
+<div id="sig" style="display:inline-block;">
+<table cellpadding="0" cellspacing="0" border="0" width="440" bgcolor="#FFFFFF" style="width:440px;background:#FFFFFF;border:1px solid #E6E6E6;border-radius:12px;border-collapse:separate;font-family:'Segoe UI',Arial,Helvetica,sans-serif;">
+  <tr>
+    <!-- Left: photo + social -->
+    <td width="118" valign="top" style="width:118px;padding:18px 0 18px 18px;">
+      <img id="photo" src="images/ishwar.png" width="96" height="96" alt="Ishwar Tudu" style="display:block;border:0;width:96px;height:96px;border-radius:14px;">
+      <table cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;margin-top:10px;">
+        <tr>
+          <td style="padding-right:8px;"><a href="https://www.instagram.com/_ishwar_tudu"><img src="images/instagram.png" width="24" height="24" alt="Instagram" style="display:block;border:0;width:24px;height:24px;"></a></td>
+          <td><a href="https://www.linkedin.com/in/ishwar-tudu-"><img src="images/linkedin.png" width="24" height="24" alt="LinkedIn" style="display:block;border:0;width:24px;height:24px;"></a></td>
+        </tr>
+      </table>
+    </td>
+
+    <!-- Right: details -->
+    <td valign="top" style="padding:18px 22px 18px 14px;">
+      <div style="font-size:22px;font-weight:800;color:#1A1A1A;line-height:27px;">Ishwar Tudu</div>
+      <div style="font-size:14px;color:#333333;margin-top:2px;line-height:20px;">Founder <span style="color:#BDBDBD;">|</span> <span style="color:#B8872B;font-weight:700;">Cowartu</span></div>
+      <div style="height:1px;background:#E4E4E4;margin:10px 0 8px 0;line-height:1px;font-size:0;">&nbsp;</div>
+      <table cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;">
+        <tr>
+          <td width="28" height="28" valign="middle"><img src="images/mail.png" width="20" height="20" alt="Email" style="display:block;border:0;width:20px;height:20px;"></td>
+          <td valign="middle" style="font-size:13px;"><a href="mailto:ishwar@cowartu.com" style="color:#1A1A1A;text-decoration:none;">ishwar@cowartu.com</a></td>
+        </tr>
+        <tr>
+          <td width="28" height="28" valign="middle"><img src="images/web.png" width="20" height="20" alt="Website" style="display:block;border:0;width:20px;height:20px;"></td>
+          <td valign="middle" style="font-size:13px;"><a href="https://www.cowartu.com" style="color:#1A1A1A;text-decoration:none;">www.cowartu.com</a></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+</div>
+<script>
+document.getElementById('copybtn').onclick=function(){
+  var el=document.getElementById('sig'),r=document.createRange();r.selectNode(el);
+  var s=window.getSelection();s.removeAllRanges();s.addRange(r);
+  var ok=false;try{ok=document.execCommand('copy');}catch(e){}
+  s.removeAllRanges();
+  document.getElementById('msg').textContent=ok?'Copy ho gaya!':'Copy nahi hua - card select karke Ctrl+C dabayein';
+};
+</script>
+
+
+</body>
+</html>
